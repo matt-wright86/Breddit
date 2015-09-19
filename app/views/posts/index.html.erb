@@ -1,0 +1,48 @@
+<div class="page-header">
+  <h1><span class="glyphicon glyphicon-tree-conifer" aria-hidden="true"></span>Breddit <small>functionality absent (even when working)</small></h1>
+<br>
+</div>
+
+
+<div class="container">
+  <button class="btn btn-default"><%= link_to 'New Post', new_post_path %></button>
+
+  <% @posts.each do |post| %>
+
+  <div class="media">
+
+  </div>
+
+    <div class="upv">
+
+
+<div class="media-left media-top">
+    <%= button_to upvote_post_path(post), method: :post, class: "btn btn-primary btn-xs" do %>
+          <span class="glyphicon glyphicon-chevron-up"></span>
+    <% end %>
+
+    <p> <%= post.votes.count %> </p>
+
+    <%= button_to downvote_post_path(post), method: :delete, class: "btn btn-primary btn-xs" do %>
+          <span class="glyphicon glyphicon-chevron-down"></span>
+    <% end %>
+</div>
+
+<div class="media-left media-top">
+
+    <%= image_tag post.photo, class: "img-thumbnail" %>
+
+</div>
+
+
+
+    <div class="media-body">
+      <h4 class="media-heading"><%=link_to post.name, "#{post.name}"  %></h4>
+        <small>submitted <%= link_to post.created_at.to_s(:long), post %></small>
+      <p> <%= truncate post.description, length: 400 %> </p>
+      <small>1540 comments share</small>
+    </div>
+   </div>
+  <%end%>
+  <hr>
+</div>

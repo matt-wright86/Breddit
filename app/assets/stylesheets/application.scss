@@ -1,0 +1,29 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+.media-top p{
+  color: #2e6da4;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.media-body{
+  border-style: solid;
+      border-width: 1px;
+      color: #ccc;
+}
+
+.media-body p{
+      color: #000;
+}
+
+.upv img{
+  padding: 4px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  max-width: 60px;
+
+}
