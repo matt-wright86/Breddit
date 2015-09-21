@@ -37,7 +37,7 @@
 
 
     <div class="media-body">
-      <h4 class="media-heading"><%=link_to post.name, "#{post.name}"  %></h4>
+      <h4 class="media-heading"><%=link_to post.name, post.dirurl  %></h4>
         <small>submitted <%= link_to post.created_at.to_s(:long), post %></small>
       <p> <%= truncate post.description, length: 400 %> </p>
       <small>1540 comments share</small>
