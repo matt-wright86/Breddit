@@ -9,11 +9,6 @@
   <div class="panel-body">
     <%= simple_format @posts.description %>
 
-
-    <%= button_to upvote_post_path, method: :post, class: "btn btn-primary btn-xs" do %>
-          <%= (@post.votes.count) %>
-          <span class="glyphicon glyphicon-chevron-up"></span>
-          <%end%>
   </div>
 </div>
 
