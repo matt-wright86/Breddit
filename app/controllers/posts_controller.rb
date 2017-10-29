@@ -1,21 +1,21 @@
 class PostsController < ApplicationController
-before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
 
-def set_post
-  @post = Post.find(params[:id])
-end
+  def set_post
+    @post = Post.find(params[:id])
+  end
 
-def upvote
-  @posts = Post.find(params[:id])
-  @posts.votes.create
-  redirect_to(posts_path)
-end
+  def upvote
+    @posts = Post.find(params[:id])
+    @posts.votes.create
+    redirect_to(posts_path)
+  end
 
-def downvote
-  @posts = Post.find(params[:id])
-  @posts.votes.last.destroy
-  redirect_to(posts_path)
-end
+  def downvote
+    @posts = Post.find(params[:id])
+    @posts.votes.last.destroy
+    redirect_to(posts_path)
+  end
 
 
   def index
